@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+        <h1 align="center">This is a colorful page called Color Palette<span id="caption"></span></h1>
+        <table class="table" align="center">
+          <tr>
+            <td><div id="d1" class="card" style="width:16rem; height: 20rem; background-color: #DBD56E;">
+            </div></td>
+            <td><div id="d2" class="card" style="width:16rem; height:20rem; background-color: #88AB75;">
+            </div></td>
+            <td><div id="d3" class="card" style="width:16rem; height:20rem; background-color: #2D93AD;">
+            </div></td>
+            <td><div id="d4" class="card" style="width:16rem; height:20rem; background-color: #7D7C84;">
+            </div></td>
+            <td><div id="d5" class="card" style="width:16rem; height:20rem; background-color: #DE8F6E;">
+            </div></td>
+          </tr>
+        </table>
+        <button onclick="getColors()" class="btn btn-primary">Change Color</button>
+
+     </div>
+
+  </body>
+
+<script type="text/javascript">
+
+function getColors()
+{
+  var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://www.colr.org/json/schemes/random/7", false);
+    //xhttp.open("POST", "http://www.colourlovers.com/api/patterns/random?format=json", false);
+
+    //xhttp.setRequestHeader("Content-type", "text");
+    xhttp.send();
+    //alert(xhttp.responseText);
+    //console.log('**Response: ' + xhttp.response);
+    var res = JSON.parse(xhttp.response);
+    //console.log(res.schemes[0].colors);
+    //alert(res);
+    var col = res.schemes[0].colors;
+    for(var i = 1;i<=5;i++){
+      var id='d'+i;
+      document.getElementById(id).style.backgroundColor='#'+col[i];
+      console.log('#'+col[i]);
+    }
+    document.getElementById('caption').innerHTML = ', Scheme is : '+res.schemes[0].tags[0].name;
+}
+
+
+function getColors2()
+{
+    jQuery.get("http://www.colourlovers.com/api/colors/random", function( response ) {
+    // response contains site information
+    prompt(response);
+} );
+prompt(response);
+}
+
+
+// function parseXMLforme(messg)
+// {
+//       if (window.DOMParser)
+//       {
+//           parser = new DOMParser();
+//           xmlDoc = parser.parseFromString(messg, "text/xml");
+//       }
+//       else // Internet Explorer
+//       {
+//           xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+//           xmlDoc.async = false;
+//           xmlDoc.loadXML(messg);
+//       }
+//
+//       var color1 = xmlDoc.getElementsByTagName("colors")[0].childNodes[0].nodeValue;
+//       return color1;
+//       // var color2 = xmlDoc.getElementsByTagName("colors")[0].childNodes[1].nodeValue;
+//       // var color3 = xmlDoc.getElementsByTagName("colors")[0].childNodes[2].nodeValue;
+// }
+
+
+
+
+</script>
+
+
+</html>
