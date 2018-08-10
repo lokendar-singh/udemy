@@ -53,7 +53,7 @@ my_dict['key1']
 my_dict['key1'] = my_dict['key1'] - 123
 
 #Check
-my_dict['key1']
+print(my_dict['key1'])
 
 
 # A quick note, Python has a built-in method of doing a self subtraction or
@@ -62,7 +62,7 @@ my_dict['key1']
 
 # Set the object equal to itself minus 123
 my_dict['key1'] -= 123
-my_dict['key1']
+print(my_dict['key1'])
 
 
 # We can also create keys by assignment. For instance if we started off with an
@@ -90,7 +90,13 @@ d
 # inside a dictionary:
 
 # Dictionary nested inside a dictionary nested in side a dictionary
-d = {'key1':{'nestkey':{'subnestkey':'value'}}}
+d = {
+        'key1':{
+            'nestkey':{
+                'subnestkey':'value'
+                }
+        }
+    }
 
 
 # Wow! Thats a quite the inception of dictionaries!
@@ -117,7 +123,8 @@ d.keys()
 d.values()
 
 # Method to return tuples of all items  (we'll learn about tuples soon)
-d.items()
+print(d)
+print(d.items())
 
 
 # Hopefully you now have a good basic understanding how to construct dictionaries.

@@ -67,7 +67,7 @@ my_list
 # We can also use the * for a duplication method similar to strings:
 
 # Make the list double
-my_list * 2
+print(my_list * 2)
 
 # Again doubling not permanent
 my_list
@@ -105,12 +105,12 @@ l
 l.pop(0)
 
 # Show
-l
+print(l)
 
 # Assign the popped element, remember default popped index is -1
 popped_item = l.pop()
 
-popped_item
+print(popped_item)
 
 # Show remaining list
 l
@@ -118,7 +118,7 @@ l
 
 # It should also be noted that lists indexing will return an error if there is
 # no element at that index. For example:
-l[100]
+# l[100]
 
 
 # We can use the **sort** method and the **reverse** methods
@@ -132,7 +132,7 @@ new_list
 # Use reverse to reverse order (this is permanent!)
 new_list.reverse()
 
-new_list
+print(new_list)
 
 # Use sort to sort the list (in this case alphabetical order,
 # but for numbers it will go ascending)
@@ -159,7 +159,7 @@ lst_3=[7,8,9]
 matrix = [lst_1,lst_2,lst_3]
 
 # Show
-matrix
+print(matrix)
 
 
 # Now we can again use indexing to grab elements, but now there are two levels
@@ -186,7 +186,7 @@ matrix[0][0]
 # Build a list comprehension by deconstructing a for loop within a []
 first_col = [row[0] for row in matrix]
 
-first_col
+print(first_col)
 
 
 # We used list comprehension here to grab the first element of every row in the

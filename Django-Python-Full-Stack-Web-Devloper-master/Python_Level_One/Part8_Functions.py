@@ -187,8 +187,8 @@ st.upper()
 st.split()
 
 tweet = 'Go Sports! #Sports'
-tweet.split('#')
-tweet.split('#')[1]
+print(tweet.split('#'))
+print(tweet.split('#')[1])
 
 d = {'k1':1,'k2':2}
 d.keys()
@@ -196,7 +196,8 @@ d.items()
 
 lst = [1,2,3]
 x = lst.pop()
-
+lst.append(1)
+print(x)
 # in Operator (not a method, just something useful)
-'x' in [1,2,3]
-'x' in ['x','y','z']
+print('x' in [1,2,3])
+print('x' in ['x','y','z'])

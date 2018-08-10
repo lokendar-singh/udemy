@@ -34,7 +34,8 @@ def arrayCheck(nums):
             return True
     return False
 
-print('Result is: ' + str(arrayCheck([1, 1, 4, 3,2,1])))
+
+print('Result is: ' + str(arrayCheck([1, 1, 2, 3,2,1])))
 
 
 #####################
@@ -81,19 +82,12 @@ def end_other(a, b):
   b = b.lower()
   print(len(a))
   print(len(b))
-  if len(a)>= len(b):
-      print('enter in if')
-      if b in a:
-          print('True b in a')
-      else:
-          print('False b not in a')
+  if a[-len(b):]==b or a == b[-len(a):]:
+     print('true')
   else:
-      if a in b:
-          print('True a in b')
-      else:
-          print('False a not in b')
+     print('false')
 
-end_other('Hiabc','abd')
+end_other('Hiabc','HelloHiabc')
 #####################
 ## -- PROBLEM 4 -- ##
 #####################
@@ -105,8 +99,14 @@ end_other('Hiabc','abd')
 # doubleChar('AAbb') → 'AAAAbbbb'
 # doubleChar('Hi-There') → 'HHii--TThheerree'
 
-#*def doubleChar(str):
+def doubleChar(str):
   # CODE GOES HERE
+  str2=''
+  for s in str:
+      str2 = str2+ s*2
+  print('str is : ' + str2)
+
+doubleChar('Hi-There')
 
 
 #####################
@@ -130,10 +130,12 @@ end_other('Hiabc','abd')
 # no_teen_sum(2, 13, 1) → 3
 # no_teen_sum(2, 1, 14) → 3
 
-#*def no_teen_sum(a, b, c):
+def no_teen_sum(a, b, c):
   # CODE GOES HERE
-#*def fix_teen(n):
+  print(fix_teen(a) + fix_tee(b) + fix_teen(b))
+def fix_teen(n):
   # CODE GOES HERE
+  if n!=15 and n!=16 and n>=13 and n<=19
 
 #####################
 ## -- PROBLEM 6 -- ##

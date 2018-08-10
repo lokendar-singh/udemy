@@ -36,7 +36,7 @@
 
 
 # Be careful with quotes!
-' I'm using single quotes, but will create an error'
+" I'm using single quotes, but will create an error"
 
 
 # The reason for the error above is because the single quote in I'm stopped the
@@ -91,7 +91,7 @@ s = 'Hello World'
 s
 
 # Print the object
-print(s)
+print('********************String Functions*********************'+s)
 
 
 # Let's start indexing!
@@ -134,7 +134,7 @@ s[-1]
 
 # Grab everything but the last letter
 s[:-1]
-
+print(s[-1] + '\n' + s[-1:])
 
 # We can also use index and slice notation to grab elements of a sequence by a
 # specified step size (the default is 1). For instance we can use two colons in
@@ -148,7 +148,7 @@ s[::2]
 
 # We can use this to print a string backwards
 s[::-1]
-
+print("**"+ s[::1] + '\n' + s[-4:])
 
 # ## String Properties
 # Its important to note that strings have an important property known as
@@ -158,7 +158,7 @@ s[::-1]
 s
 
 # Let's try to change the first letter to 'x'
-s[0] = 'x'
+# s[0] = 'x'
 
 
 # Notice how the error tells us directly what we can't do,
@@ -167,6 +167,7 @@ s[0] = 'x'
 # Something we can do is concatenate strings!
 s
 
+print('********************String Functions End*********************'+s)
 # Concatenate strings!
 s + ' concatenate me!'
 
@@ -179,8 +180,7 @@ print(s)
 
 letter = 'z'
 
-letter*10
-
+print(letter*10)
 
 # ## Basic Built-in String methods
 #

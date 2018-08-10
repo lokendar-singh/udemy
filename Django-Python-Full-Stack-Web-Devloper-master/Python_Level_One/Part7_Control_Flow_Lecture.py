@@ -110,17 +110,17 @@ else:
 seq = [1,2,3,4,5]
 
 for item in seq:
-    print(item)
+    # print(item)
 
 
 # Perform an action for every element but doesn't actually involve the elements
 for item in seq:
-    print('Yep')
+    # print('Yep')
 
 
 # You can call the loop variable whatever you want:
 for jelly in seq:
-    print(jelly+jelly)
+    # print(jelly+jelly)
 
 ## For Loop with a Dictionary
 ages = {"Sam":3,"Frank":4,"Dan":29}
