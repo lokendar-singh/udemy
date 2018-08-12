@@ -1,3 +1,4 @@
+################# [List] ##############
 # mylist = [1,2,3,4,5,6,7]
 #
 # print(mylist)
@@ -12,8 +13,11 @@
 #
 # print(f_col)
 
-########Dictionary########
+######## {Dictionary} ########
+#
+# obj = {'key1':'value1','key2':2,'key3':False,'key4':{'iKey5':[1,2,3,'list']}}
+# print(obj)
+# print(obj['key4']['iKey5'][3].upper())
+# obj = {'lunch':'pizza','dinner':'burger'}
 
-obj = {'key1':'value1','key2':2,'key3':False,'key4':{'iKey5':[1,2,3,'list']}}
-print(obj)
-print(obj['key4']['iKey5'][3].upper())
+######## (Tuple) Set and Booleans ########
