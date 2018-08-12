@@ -98,7 +98,8 @@ greet()
 
 # Global
 #
-print name
+
+# print name
 
 
 # Built-in
