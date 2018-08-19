@@ -1,0 +1,37 @@
+{% load staticfiles%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="{% static "lib/alert.js" %}">
+
+    </script>
+    <title></title>
+  </head>
+  <body>
+    <h1>This date is coming from views directly</h1>
+    {{fname}}
+    {{lname}}
+    <img src ="{% static "images/bag-sizes.jpg" %}" alt="File not found"/>
+    <h1>Below data is coming from Model and model is getting from table</h1>
+
+    {% if acc_rec %}
+
+        <table>
+          <thead>
+            <th>Site Id</th>
+            <th>Accessed Date</th>
+          </thead>
+          {% for rec in acc_rec%}
+          <tr>
+            <td>{{rec.name}}</td>
+            <td>{{rec.date}}</td>
+          </tr>
+          {% endfor %}
+        </table>
+    {% else %}
+      <h2>No records exist in table!!</h2>
+    {% endif %}
+
+  </body>
+</html>
