@@ -124,36 +124,54 @@ class Player(Hand):
         print(Player.p1)
         print(Player.p2)
         ctt = 0
-        while ctt < 50:
+        while ctt < 400:
             ctt = ctt+1
             if(len(Player.p1)>0 and len(Player.p2)>0):
-                Player.checkCard(self,0)
+                k1 = Player.p1[0]
+                k2 = Player.p2[0]
+                if Player.deck[k1] > Player.deck[k2]:
+                    Player.remCard(self,'p2')
+                elif Player.deck[k1] == Player.deck[k2]:
+                    loop_ind = 4
+                    Player.checkCard(self,loop_ind)
+                else:
+                    Player.remCard(self,'p1')
+
                 print(Player.p1)
                 print(Player.p2)
             else:
                 if len(Player.p1)<=0:
-                    print('Player 1 {} won'.format(self.n1))
-                    break;
-                else:
                     print('Player 2 {} won'.format(self.n2))
                     break;
+                elif len(Player.p2 <=0):
+                    print('Player 1 {} won'.format(self.n1))
+                    break;
 
-    def checkCard(self,ind):
-        k1 = Player.p1[ind]
-        k2 = Player.p2[ind]
-        if Player.deck[k1] > Player.deck[k2]:
-            Player.remCard(self,'p2')
-        elif Player.deck[k1] == Player.deck[k2]:
-            
-            for i in range(5):
+    def checkCard(self,loop_ind):
+        if len(Player.p1)<loop_ind:
+            print('Player 2 {} won'.format(self.n2))
+            return;
+        elif len(Player.p2)<loop_ind:
+            print('Player 1 {} won'.format(self.n1))
+            return;
 
-
-            k1 = Player.p1[ind]
-            k2 = Player.p2[ind]
-            if Player.deck[4] > Player.deck[4]:
+        new_key1 = Player.p1[loop_ind]
+        new_key2 = Player.p2[loop_ind]
+        if Player.deck[new_key1] > Player.deck[new_key1]:
+            for i in range(loop_ind+1):
                 Player.remCard(self,'p2')
+        elif Player.deck[new_key1] == Player.deck[new_key1]:
+            loop_ind =loop_ind + 4
+            Player.checkCard(self,loop_ind)
         else:
-            Player.remCard(self,'p1')
+            for i in range(loop_ind+1):
+                Player.remCard(self,'p1')
+
+
+        k1 = Player.p1[loop_ind]
+        k2 = Player.p2[loop_ind]
+
+
 
 
 ######################
