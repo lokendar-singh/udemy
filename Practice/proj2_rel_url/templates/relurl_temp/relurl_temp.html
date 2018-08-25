@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>This is relative url</h1>
+    <a href="../relurl/other">Click here to visit other page</a>
+    <h2>This is relative URL link</h2>
+    <a href="{% url 'loki_app:other_name' %}">Other Page</a>
+
+    <a href="{% url 'admin:index' %}">Admin page</a>
+
+    <a href="{% url 'index' %}">Index page</a>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+{% extends "relurl_temp/base.html" %}
+
+{% block body_block%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>This is OTHER html</h1>
+    <a href="relurl/relative">Click here to visit Relative URL page</a>
+    <h2>This is relative URL link</h2>
+    <a href="{% url 'loki_app:rel_url_name' %}">Relative page</a>
+  </body>
+</html>
+{% endblock%}
